@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:splitez/pages/homepage.dart';
+import 'package:splitez/view/homepage.dart';
 import 'package:splitez/theme/theme.dart';
+import 'package:splitez/view/onboarding_page.dart';
 import 'package:splitez/theme/theme_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: OnboardingPage(),
       theme: Provider.of<ThemeProvider>(context).themeData,
     );
   }

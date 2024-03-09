@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "297094938400",
+    "project_id": "splitez-fd86a",
+    "storage_bucket": "splitez-fd86a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:297094938400:android:a9c790d27e2632ca002145",
+        "android_client_info": {
+          "package_name": "com.example.splitez"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXWhP3ssm91GyXaM8ch7pWUf1cUBy0294"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

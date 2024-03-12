@@ -36,7 +36,7 @@ class _MyTextFieldState extends State<MyTextField> {
           boxShadow: [
             BoxShadow(
               color: widget.shadowColor,
-              offset: Offset(3, 3),
+              offset: Offset(2, 3),
               blurRadius: 0,
             ),
           ],
@@ -71,7 +71,8 @@ class _MyTextFieldState extends State<MyTextField> {
               filled: true,
               hintText: widget.hintText,
               hintStyle: TextStyle(
-                color: Colors.grey,
+                fontWeight: FontWeight.w300,
+                color: Colors.grey.shade700,
                 fontSize: 14,
               ),
             ),

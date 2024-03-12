@@ -20,7 +20,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
   //when click on sign up
   void register() {
-    Navigator.pushNamed(context, '/detailpage');
+    Navigator.pushNamed(context, '/registerpage');
   }
 
   @override
@@ -115,6 +115,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   buttonColor: Theme.of(context).colorScheme.onBackground,
                   borderColor: Theme.of(context).colorScheme.onBackground,
                   textColor: Theme.of(context).colorScheme.background,
+                  borderRadius: 25,
                 ),
               ),
 
@@ -132,6 +133,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   buttonColor: Theme.of(context).colorScheme.background,
                   borderColor: Theme.of(context).colorScheme.onBackground,
                   textColor: Theme.of(context).colorScheme.onBackground,
+                  borderRadius: 25,
                 ),
               ),
 

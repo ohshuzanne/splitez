@@ -8,6 +8,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:splitez/firebase_options.dart';
 import 'package:provider/provider.dart';
 import 'package:splitez/view/loginpage.dart';
+import 'package:splitez/view/registerpage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
           '/homepage': (context) => const HomePage(),
           '/detailpage': (context) => const DetailPage(),
           '/loginpage': (context) => const LoginPage(),
+          '/registerpage': (context) => const RegisterPage(),
         });
   }
 }

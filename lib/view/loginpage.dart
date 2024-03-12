@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:splitez/utils/color.dart';
+import 'package:splitez/components/button.dart';
 import 'package:splitez/components/textfield.dart';
 
 class LoginPage extends StatefulWidget {
@@ -12,6 +14,8 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   TextEditingController _usernameController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
+
+  void signIn() {}
 
   @override
   Widget build(BuildContext context) {
@@ -80,12 +84,11 @@ class _LoginPageState extends State<LoginPage> {
                   textFieldBorder: Theme.of(context).colorScheme.onBackground,
                   textColor: Theme.of(context).colorScheme.onBackground,
                   shadowColor: Theme.of(context).colorScheme.onBackground,
-                  textFieldColor: Theme.of(context).colorScheme.background,
+                  textFieldColor: Theme.of(context).colorScheme.primary,
                 ),
               ),
 
               //password
-              //username
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
                 child: MyTextField(
@@ -95,7 +98,71 @@ class _LoginPageState extends State<LoginPage> {
                   textFieldBorder: Theme.of(context).colorScheme.onBackground,
                   textColor: Theme.of(context).colorScheme.onBackground,
                   shadowColor: Theme.of(context).colorScheme.onBackground,
-                  textFieldColor: Theme.of(context).colorScheme.background,
+                  textFieldColor: Theme.of(context).colorScheme.primary,
+                ),
+              ),
+
+              //forgot password
+              Padding(
+                padding: const EdgeInsets.fromLTRB(
+                  32,
+                  6,
+                  30,
+                  20,
+                ),
+                child: Row(
+                  children: [
+                    Text(
+                      "Forgot password?",
+                      style: TextStyle(
+                        fontFamily: 'SpaceGrotesk',
+                        fontSize: 14,
+                        fontWeight: FontWeight.w300,
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+              //sign in button
+              Padding(
+                padding: const EdgeInsets.fromLTRB(
+                  30,
+                  0,
+                  30,
+                  0,
+                ),
+                child: ShadowButton(
+                  onTap: signIn,
+                  buttonText: "Sign In",
+                  buttonColor: featureYellow,
+                  borderColor: Theme.of(context).colorScheme.onBackground,
+                  textColor: Theme.of(context).colorScheme.onBackground,
+                  borderRadius: 10,
+                ),
+              ),
+
+              //register
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, '/registerpage');
+                },
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(
+                    32,
+                    30,
+                    30,
+                    20,
+                  ),
+                  child: Text(
+                    "Don't have an account? Register here.",
+                    style: TextStyle(
+                      fontFamily: 'SpaceGrotesk',
+                      fontSize: 14,
+                      fontWeight: FontWeight.w300,
+                    ),
+                  ),
                 ),
               ),
             ],
